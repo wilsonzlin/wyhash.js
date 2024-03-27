@@ -1,0 +1,26 @@
+{
+  "name": "wyhash.js",
+  "version": "0.0.1",
+  "main": "dist/main.js",
+  "files": [
+    "dist/**"
+  ],
+  "repository": "https://github.com/wilsonzlin/wyhash.js",
+  "author": "Wilson Lin <npm@wilsonl.in>",
+  "license": "ISC",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist",
+    "format": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,jsx,mjs,mjsx,sass,scss,ts,tsx}'",
+    "prepublishOnly": "npm run build && npm run test",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-organize-imports": "3.2.4",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.3"
+  }
+}

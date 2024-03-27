@@ -1,0 +1,29 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.test.ts"],
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "sourceMap": false,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "ESNext"
+  }
+}
