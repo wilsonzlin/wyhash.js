@@ -1,10 +1,12 @@
 # wyhash.js
 
-A port of [wyhash](https://github.com/wangyi-fudan/wyhash) to JavaScript, with TypeScript type definitions.
+A port of [wyhash](https://github.com/wangyi-fudan/wyhash) to pure JavaScript, with TypeScript type definitions.
 
 wyhash is a fast and solid non-cryptographic hash function. Its code is relatively simple and system-independent (endianness and bitness), making it easy to correctly port to and generate consistent hashes from many different languages and platforms.
 
 A simpler API is provided, while all original functions and constants are available under the `internal` exported object.
+
+If WASM is available, a WebAssembly binding to the original library may be faster.
 
 ## Usage
 
