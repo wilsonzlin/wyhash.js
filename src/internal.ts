@@ -70,12 +70,14 @@ export const wyhash = (
     } else if (len > 0) {
       a = _wyr3(p, len);
       b = 0n;
-    } else a = b = 0n;
+    } else {
+      a = b = 0n;
+    }
   } else {
     let i = len;
     if (i >= 48) {
-      let see1 = seed,
-        see2 = seed;
+      let see1 = seed;
+      let see2 = seed;
       do {
         seed = _wymix(_wyr8(p) ^ secret[1], _wyr8(sub(p, 8)) ^ seed);
         see1 = _wymix(_wyr8(sub(p, 16)) ^ secret[2], _wyr8(sub(p, 24)) ^ see1);
@@ -99,7 +101,9 @@ export const wyhash = (
   return _wymix(a ^ secret[0] ^ asU64(len), b ^ secret[1]);
 };
 
-//the default secret parameters
+/**
+ * the default secret parameters
+ */
 export const _wyp: Secret = [
   0x2d358dccaa6c78a5n,
   0x8bb84b93962eacc9n,
@@ -240,7 +244,9 @@ const is_prime = (n: uint64_t): boolean => {
   if (!sprp(n, 37n)) return false;
   return true;
 };
-//make your own secret
+/**
+ * make your own secret
+ */
 export const make_secret = (seed: uint64_t): Secret => {
   const c = [
     15, 23, 27, 29, 30, 39, 43, 45, 46, 51, 53, 54, 57, 58, 60, 71, 75, 77, 78,
